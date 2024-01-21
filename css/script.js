@@ -3,32 +3,38 @@ const multiplicationform = document.querySelector("#multiplication-form");
 const numberInput  = document.querySelector("#number");
 const multiplicationInput = document.querySelector("#multiplicator");
 
-const multiplicationTable = document.querySelector("#multiplicatiion-operations");
+const multplicationTitle = document.querySelector("#multiplication-title span");
+
+const multiplicationTable = document.querySelector(
+    "#multiplicatiion-operations"
+    );
 
 //funções
 const createTable = (number, multiplicatorNumber) => {
   multiplicationTable.innerHTML = "";
 
-  for (i =1; i <= multiplicatorNumber; i++){
+  for (i = 1; i <= multiplicatorNumber; i++){
    const result = number * i;
 
-    const template = `<div class="row">
-    <div class= "operation">${number} x ${i} = </div>
-    <div class="result">${result}</div>
-    </div>`;
+   const template = `<div class="row">
+   <div class= "operation">${number} x ${i} = </div>
+   <div class="result">${result}</div>
+   </div>`;
 
-    const parser = new DOMParser() //parser quer dizer analizar
+   const parser = new DOMParser(); //parser quer dizer analizar
 
-    const htmlTemplate = parser.parseFromString(template, "text/html");
+   const htmlTemplate = parser.parseFromString(template, "text/html");
 
-    const row = htmlTemplate.querySelector(".row");
+   const row = htmlTemplate.querySelector(".row");
 
-    multiplicationTable.appendChild(row);
-
-
+   multiplicationTable.appendChild(row);
 
 
-  }
+
+
+ }
+
+ multplicationTitle.innerHTML = number;
 };
 
 
