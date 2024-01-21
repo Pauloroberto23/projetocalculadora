@@ -10,18 +10,26 @@
 <body>
    
     <h2>digite o numero e confirme para gerar uma tabuada</h2>
-    <form action="" id="multiplication-form">
+    <form  id="multiplication-form">
         <div class="form-control">
             <label for="number">tabuada do:</label>
             <input type="number" name="number" id="number" placeholder="3">
         </div>
         <div class="form-control">
             <label for="multiplicator">multiplicar  ate:</label>
-            <input type="number" name="multiplicator" id="multiplicator" placeholder="3">
-        </div>
+            <input type="number" name="multiplicator" id="multiplicator" value="10">
 
+        </div>
+        <input type="submit" value="calcular">
 
     </form>
+    <div id="multiplication-table">
+        <h2 id="multiplication-title">tabuada do numero: <span></span></h2>
+        <div id="multiplication-operations">
+           <p>informe o numero para calcular uma tabuada...</p>
+           
+        </div>
+    </div>
 
 
 </body>
